@@ -13,3 +13,4 @@ for (let i = 0; i < allUsers.length; i++) {
     console.log(allUsers[i].firstName);
   }
 }
+

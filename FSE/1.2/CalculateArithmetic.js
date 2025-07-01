@@ -1,19 +1,11 @@
-function calculateArithmetic(a,b,type){
-  if(type=="sum"){
-    return a+b
-  }
-  if(type=="minus"){
-    return a-b
-  }
+function calculateArithmetic(a,b,someFunction){
+  const ans=someFunction(a,b)
+  return ans;
 }
 
-function Sum(){
+function sum(a,b){
   return a+b
 }
 
-function Sub(){
-  return a-b
-}
-
-const value=calculateArithmetic(1,2,"minus")
+const value=calculateArithmetic(12,2,sum)
 console.log(value)

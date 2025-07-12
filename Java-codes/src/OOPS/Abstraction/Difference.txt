@@ -1,0 +1,26 @@
+you can implement as many interfaces as you want in java , there is no limit
+
+but you can extend only one class
+
+but you can do both extending a class and implementing an interface
+
+every field that is declared inside an interface will be static and final so you need
+to instantiate it with some kind of value
+
+because of this every field in an interface has a static value which gets automatically
+connect to all the objects of the class , so it doesn't make a sense
+
+so we have an abstract classes so that evry object can have its types set by not
+predefining them
+
+so you might want to create an abstract class if you have a lot of
+closely related classes that you want to have the same functionality
+and the same types of fields available
+
+but
+
+you might want to make an interface
+instead if you have a lot of unrelated
+classes that you all want to be able to
+do a certain thing that makes other types
+of classes will be able to do a certain thing

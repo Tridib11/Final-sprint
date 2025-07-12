@@ -10,7 +10,7 @@ to instantiate it with some kind of value
 because of this every field in an interface has a static value which gets automatically
 connect to all the objects of the class , so it doesn't make a sense
 
-so we have an abstract classes so that evry object can have its types set by not
+so we have an abstract classes so that every object can have its types set by not
 predefining them
 
 so you might want to create an abstract class if you have a lot of

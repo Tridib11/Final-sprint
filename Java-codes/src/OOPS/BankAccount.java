@@ -3,6 +3,7 @@ package OOPS;
 class Test3{
     double balance;
     public Test3(){
+        System.out.println("Default constructor called");
         balance=100.0;
     }
     public void printBalance(){

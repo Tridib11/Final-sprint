@@ -13,7 +13,7 @@ class Vehicle{
     }
 }
 
-// Derived Class
+// Derived Classes
 class Car extends Vehicle{
     private String numberOfCar;
     public Car(String numberOfCar){

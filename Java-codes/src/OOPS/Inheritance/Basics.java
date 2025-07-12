@@ -1,30 +1,40 @@
 package OOPS.Inheritance;
-
-class Car{
-    private String numberOfCar;
-    public Car(String numberOfCar){
-        this.numberOfCar=numberOfCar;
+// Base class
+class Vehicle{
+    String numberOfVehicle;
+    public Vehicle(String numberOfVehicle){
+        this.numberOfVehicle=numberOfVehicle;
     }
-    public void printCarNumber(){
-        System.out.println(numberOfCar);
+    public void Honk(){
+        System.out.println("Honk!!!!!!!!!!");
+    }
+    public void printNumberOfVehicle(){
+        System.out.println(numberOfVehicle);
     }
 }
 
-class Bus{
+// Derived Class
+class Car extends Vehicle{
+    private String numberOfCar;
+    public Car(String numberOfCar){
+        super(numberOfCar);
+    }
+}
+
+class Bus extends Vehicle{
     private String numberOfCar;
     public Bus(String numberOfCar){
-        this.numberOfCar=numberOfCar;
-    }
-    public void printCarNumber(){
-        System.out.println(numberOfCar);
+        super(numberOfCar);
     }
 }
 public class Basics {
     public static void main(String[] args) {
         Car car=new Car("Car WB824824");
-        car.printCarNumber();
+        car.printNumberOfVehicle();
+        car.Honk();
 
         Bus bus=new Bus("Bus WB842040294");
-        bus.printCarNumber();
+        bus.printNumberOfVehicle();
+        bus.Honk();
     }
 }

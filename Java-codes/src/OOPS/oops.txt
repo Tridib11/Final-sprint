@@ -1,0 +1,4 @@
+public -> everywhere
+private -> current class
+protected -> current package and all other sub packages
+

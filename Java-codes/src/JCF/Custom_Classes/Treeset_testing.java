@@ -4,7 +4,6 @@ public class Treeset_testing {
     public static void main(String[] args) {
         //DS that stores unique elements in a sorted order
         //log n
-
         Set<Integer> ts=new TreeSet<>();
         ts.add(3);
         ts.add(1);

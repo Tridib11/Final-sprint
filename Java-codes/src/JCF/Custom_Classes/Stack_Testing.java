@@ -13,5 +13,7 @@ public class Stack_Testing {
         System.out.println(st.pop());
         System.out.println(st);
 
+        System.out.println(st.isEmpty());
+
     }
 }

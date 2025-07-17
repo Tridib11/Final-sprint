@@ -5,6 +5,7 @@ public class PriorityQueue_testing {
         /*
         Min heap ds
         when you ask for peek() it gives the minimum element
+        stores in ascending
          */
         PriorityQueue<Integer> pq=new PriorityQueue<>();
         for(int i=0;i<10;i++){

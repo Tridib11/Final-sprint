@@ -4,6 +4,7 @@ public class HashSet__testing {
     public static void main(String[] args) {
 
         //Stores unique elements in random order
+        //O(1)
 
         HashSet<Integer> hs=new HashSet<>();
         for(int i=0;i<10;i++){

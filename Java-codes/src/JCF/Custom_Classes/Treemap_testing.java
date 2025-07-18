@@ -4,6 +4,8 @@ public class Treemap_testing {
     public static void main(String[] args) {
 
         /*
+
+        Stores in sorted order
         O(log n)
         stores unique keys , doesnot store duplicates
 

@@ -25,7 +25,6 @@ public class Main {
         list.add(4);
         System.out.println(list);
         /*
-
         Collections.sort(list,new Comparator<Integer>(){
             @Override
             public int compare(Integer num1,Integer num2){
@@ -37,7 +36,6 @@ public class Main {
                 return 0;
             }
         });
-
          */
             //Collections.sort(list,getComparator());
         Collections.sort(list,(a,b)->b-a);

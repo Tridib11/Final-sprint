@@ -1,7 +1,6 @@
 package JCF.Custom_Classes.Custom_Comparator;
 import java.util.*;
 public class Main {
-
     public static Comparator<Integer> getComparator(){
         return new  Comparator<Integer>(){
             @Override
@@ -16,9 +15,7 @@ public class Main {
         };
     }
     public static void main(String[] args) {
-
         List<Integer> list=new ArrayList<>();
-
         list.add(1);
         list.add(2);
         list.add(3);
@@ -39,7 +36,6 @@ public class Main {
          */
             //Collections.sort(list,getComparator());
         Collections.sort(list,(a,b)->b-a);
-
         System.out.println(list);
     }
 }

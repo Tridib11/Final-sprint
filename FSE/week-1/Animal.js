@@ -7,7 +7,11 @@ class Animal {
   speak() {
     console.log("hi there " + this.speaks);
   }
+  static myType() {
+    console.log("Animal");
+  }
 }
 
 let dog = new Animal("Dog", 4, "Bhow bhow");
 dog.speak();
+Animal.myType();

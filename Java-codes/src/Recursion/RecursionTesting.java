@@ -2,7 +2,7 @@ package Recursion;
 
 public class RecursionTesting {
     public static void main(String[] args) {
-        Tail(5);
+        infinite(5);
     }
 
 
@@ -18,5 +18,10 @@ public class RecursionTesting {
             System.out.println(n+" ");
             Tail(n-1);
         }
+    }
+
+    private static void infinite(int n){
+        System.out.println("Overflow");
+        infinite(n+1);
     }
 }

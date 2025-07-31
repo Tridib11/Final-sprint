@@ -23,10 +23,5 @@ public class twoDArray {
             System.out.println(Arrays.toString(ints));
         }
 
-
-
-
-
-
     }
 }

@@ -5,7 +5,6 @@ app.get('/',(req,res)=>{
   res.send("Hello world")
 })
 
-
 app.use(express.json())
 app.post("/test",(req,res)=>{
   console.log(req.headers.authorization)

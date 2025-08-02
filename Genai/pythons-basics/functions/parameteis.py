@@ -5,7 +5,7 @@
 
 
 
-def hello(age,name):
+def hello(age,name="Rohan"):
   print(f"your name is {name} and your age is {age}")
 
 hello(age=22,name="Akash")

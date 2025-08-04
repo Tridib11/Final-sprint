@@ -4,7 +4,7 @@ public class StringSearch {
     public static void main(String[] args) {
         String s="Rohan";
         char c='a';
-        System.out.println(search(s,c));
+        System.out.println(search2(s,c));
     }
 
     static boolean search(String str, char target){
@@ -14,6 +14,20 @@ public class StringSearch {
 
         for(int i=0;i<str.length();i++){
             if(str.charAt(i)==target){
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    static boolean search2(String str, char target){
+        if(str.isEmpty()){
+            return false;
+        }
+
+        for(char ch:str.toCharArray()){
+            if(ch==target){
                 return true;
             }
         }

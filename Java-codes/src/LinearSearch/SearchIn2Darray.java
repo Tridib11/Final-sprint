@@ -13,10 +13,10 @@ public class SearchIn2Darray {
         System.out.println(Arrays.toString(searchin2dArray(arr,8)));
     }
     private static int[] searchin2dArray(int[][] arr,int target){
-        for(int i=0;i<arr.length;i++){
-            for(int j=0;j<arr[i].length;j++){
-                if(arr[i][j]==target){
-                    return new int[]{i+1,j+1};
+        for(int row=0;row<arr.length;row++){
+            for(int col=0;col<arr[row].length;col++){
+                if(arr[row][col]==target){
+                    return new int[]{row+1,col+1};
                 }
             }
         }

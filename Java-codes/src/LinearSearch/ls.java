@@ -1,7 +1,7 @@
 package LinearSearch;
 
 public class ls {
-    public static void main(String[] args) {
+    public static void main(StringSearch[] args) {
         int[] arr={1,2,3,4,5,6};
         System.out.println(linearSearch(arr,3));
     }

@@ -8,3 +8,11 @@ print(b)
 
 c=hash((1,2,3))
 print(c)
+
+
+#sets give random values
+
+
+a={1,8,9,10,2,3,4,"Hello"}
+for i in a:
+  print(i)

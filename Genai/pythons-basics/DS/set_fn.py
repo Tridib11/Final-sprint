@@ -4,7 +4,6 @@ B={3,4,5}
 union_set=A.union(B)
 print(union_set)
 
-
 intersection_Set=A.intersection(B) #common
 print(intersection_Set)
 

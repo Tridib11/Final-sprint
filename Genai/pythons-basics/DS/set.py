@@ -14,5 +14,8 @@ print(c)
 
 
 a={1,8,9,10,2,3,4,"Hello"}
-for i in a:
-  print(i)
+# for i in a:
+#   print(i)
+
+a.remove(8)
+print(a)

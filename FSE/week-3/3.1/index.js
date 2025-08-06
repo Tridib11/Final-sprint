@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+function userMiddleware(req,res,next){
+
+}
+
 app.get("/health-checkup", (req, res) => {
   const kidneyId = req.query.kidneyId;
   const username = req.headers.username;

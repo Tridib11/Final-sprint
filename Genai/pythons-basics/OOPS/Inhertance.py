@@ -4,7 +4,6 @@ class Animal:
 class Dog(Animal):
   def speak(self):
     super().speak()
-    print("Dog speaks")
   
 d=Dog()
 d.speak()

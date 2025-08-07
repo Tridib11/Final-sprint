@@ -9,13 +9,17 @@ def readFileAndFolder():
 
 def createFile():
   readFileAndFolder()
+  name=input("Enter your file name ")
+  
 
-print("press 1 for creating a file")
-print("press 2 for reading a file")
-print("press 3 for updating a file")
-print("press 4 for deleting a file")
 
-check=int(input("Enter a response"))
+
+print("press 1 for creating a file  ")
+print("press 2 for reading a file  ")
+print("press 3 for updating a file  ")
+print("press 4 for deleting a file  ")
+
+check=int(input("Enter a response  "))
 
 if check==1:
   createFile()

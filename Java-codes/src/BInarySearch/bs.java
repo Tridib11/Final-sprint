@@ -28,27 +28,42 @@ public class bs {
         return -1;
     }
 
-    static int oabinarySearch(int[] arr,int target){
 
-        /**
-         * 11/2=5
-         *
-         * 0  1  2  3 4 5 6 7 8 9 10 11
-           12,11,10,9,8,7,6,5,4,3,2, 1 target=8
-         */
+    static int oabinarySearch(int[] arr, int target) {
+            int start = 0;
+            int end = arr.length - 1;
 
-        int start=0;
-        int end=arr.length-1;
-        while(start<=end){
-            int mid=start+(end-start)/2;
-            if(target>arr[mid]){
-                end=mid-1;
-            }else if(target<arr[mid]){
-                start=mid+1;
-            }else{
-                return mid;
+            // Ascending order
+            if (arr[start] < arr[end]) {
+                while (start <= end) {
+                    int mid = start + (end - start) / 2;
+
+                    if (target < arr[mid]) {
+                        end = mid - 1;
+                    } else if (target > arr[mid]) {
+                        start = mid + 1;
+                    } else {
+                        return mid;
+                    }
+                }
             }
+            // Descending order
+            else if (arr[start] > arr[end]) {
+                while (start <= end) {
+                    int mid = start + (end - start) / 2;
+
+                    if (target < arr[mid]) {   // 🔥 in descending, smaller values are to the right
+                        start = mid + 1;
+                    } else if (target > arr[mid]) {  // 🔥 bigger values are to the left
+                        end = mid - 1;
+                    } else {
+                        return mid;
+                    }
+                }
+            }
+
+            return -1; // not found
         }
-        return -1;
-    }
+
+
 }

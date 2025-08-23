@@ -46,6 +46,13 @@ app.post("/signup", async function (req, res) {
   const { username, password } = req.body;
 
   try {
+
+    const userIsThere=await userModel.findOne({username,password})
+    if(userIsThere){
+      return res.status(403).json({
+        msg:"User already exists"
+      })
+    }
     const person = await userModel.create({
       username: username,
       password: password,

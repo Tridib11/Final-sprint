@@ -46,12 +46,11 @@ app.post("/signup", async function (req, res) {
   const { username, password } = req.body;
 
   try {
-
-    const userIsThere=await userModel.findOne({username,password})
-    if(userIsThere){
+    const userIsThere = await userModel.findOne({ username, password });
+    if (userIsThere) {
       return res.status(403).json({
-        msg:"User already exists"
-      })
+        msg: "User already exists",
+      });
     }
     const person = await userModel.create({
       username: username,
@@ -74,7 +73,7 @@ app.get("/users", async (req, res) => {
 
     const username = decoded.username;
 
-    const user = await userModel.find({username});
+    const user = await userModel.find({ username });
     return res.status(200).json({
       user,
     });

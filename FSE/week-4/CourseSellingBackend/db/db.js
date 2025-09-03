@@ -1,6 +1,9 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/CourseSellingApplication")
+mongoose
+  .connect(
+    "mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/CourseSellingApplication"
+  )
   .then(() => {
     console.log("DB connected");
   })
@@ -8,24 +11,35 @@ mongoose.connect("mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/CourseS
     console.error("DB connection error:", err);
   });
 
-const AdminSchema=mongoose.Schema({
+const AdminSchema = mongoose.Schema({
+  username: String,
+  password: String,
+});
 
-})
+const UserSchema = mongoose.Schema({
+  username: String,
+  password: String,
+  purchasedCourses: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Course",
+    },
+  ],
+});
 
-const UserSchema=mongoose.Schema({
+const CourseSchema = mongoose.Schema({
+  title: String,
+  description: String,
+  imageLink: String,
+  price: Number,
+});
 
-})
+const Admin = mongoose.model("Admin", AdminSchema);
+const User = mongoose.model("User", UserSchema);
+const Course = mongoose.model("Course", CourseSchema);
 
-const CourseSchema=mongoose.Schema({
-
-})
-
-const Admin=mongoose.model("Admin",AdminSchema)
-const User=mongoose.model("User",UserSchema)
-const Course=mongoose.model("Course",CourseSchema)
-
-module.exports={
+module.exports = {
   Admin,
   User,
-  Course
-}
+  Course,
+};

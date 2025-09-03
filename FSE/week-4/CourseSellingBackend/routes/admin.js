@@ -10,7 +10,7 @@ router.post("/courses",adminMiddleware,(req,res)=>{
 
 })
 
-router.get("/courses",adminMiddleware,(res,res)=>{
+router.get("/courses",adminMiddleware,(req,res)=>{
   
 })
 

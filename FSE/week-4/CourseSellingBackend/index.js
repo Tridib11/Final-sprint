@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-const adminRouter = require("../4.3/routes/admin");
-const userRouter = require("../4.3/routes/user");
+const adminRouter = require("./routes/admin");
+const userRouter = require("./routes/user");
 
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);

@@ -1,8 +1,12 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/CourseSellingApplication").then(()=>{
-  console.log("DB connected")
-})
+mongoose.connect("mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/CourseSellingApplication")
+  .then(() => {
+    console.log("DB connected");
+  })
+  .catch((err) => {
+    console.error("DB connection error:", err);
+  });
 
 const AdminSchema=mongoose.Schema({
 

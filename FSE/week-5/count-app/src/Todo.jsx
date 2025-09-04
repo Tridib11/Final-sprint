@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./App.css";
 function Todo() {
   const [todos, setTodos] = useState([
     {
@@ -16,17 +16,7 @@ function Todo() {
       id: 3,
       title: "Groceries",
       description: "Maa ne sabzi laane ko bola hai",
-    },
-    {
-      id: 4,
-      title: "Call Friend",
-      description: "Kabhi to phone kar le bhai",
-    },
-    {
-      id: 5,
-      title: "Project Work",
-      description: "Sprint khatam karna hai",
-    },
+    }
   ]);
   return <div>
     <div>
@@ -49,7 +39,7 @@ function Todo() {
             description: "Some random description"
           }
         ]);
-      }}>Add todo</button>
+      }}>Add random todo</button>
     </div>
   </div>;
 }

@@ -24,6 +24,32 @@ router.get("/courses", async (req, res) => {
   });
 });
 
+
+router.post("/signin",async(req,res)=>{
+  const username=req.body.username
+  const password=req.body.password
+  console.log(JWT_SECRET)
+
+  const user=await User.find({
+    username,
+    password
+  })
+
+  if(user){
+    const token=jwt.sign({
+      username
+    },JWT_SECRET)
+
+    res.json({
+      token
+    })
+  }else{
+    res.status(411).json({
+      message:"Incorrect email and pass"
+    })
+  }
+})
+
 router.post("/courses/:courseId", userMiddleware, async (req, res) => {
   const courseId = req.params.courseId;
   const username = req.headers.username;
@@ -33,7 +59,7 @@ router.post("/courses/:courseId", userMiddleware, async (req, res) => {
       username: username,
     },
     {
-      $push: {
+      "$push": {
         purchasedCourses: courseId,
       },
     }
@@ -51,7 +77,7 @@ router.get("/purchasedCourses", userMiddleware, async (req, res) => {
   console.log(user.purchasedCourses);
   const courses = await Course.find({
     _id: {
-      $in: user.purchasedCourses,
+      "$in": user.purchasedCourses,
     },
   });
 

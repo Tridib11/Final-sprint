@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "your connection string"
+    "mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/CourseSellingApplication"
   )
   .then(() => {
     console.log("DB connected");

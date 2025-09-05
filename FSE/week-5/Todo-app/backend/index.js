@@ -8,6 +8,12 @@ const app=express()
 app.use(cors())
 app.use(express.json())
 
+app.get("/",(req,res)=>{
+  res.json({
+    msg:"Server running"
+  })
+})
+
 app.post("/todo",async(req,res)=>{
   const createPayload=req.body
   const parsedPayload=createTodo.safeParse(createPayload)

@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb+srv://admin:admin@cluster0.ksun8sc.mongodb.net/Todo-fullstack").then(()=>{
+mongoose.connect(process.env.MONGO_URI)
+.then(()=>{
   console.log("Db connected")
 })
 

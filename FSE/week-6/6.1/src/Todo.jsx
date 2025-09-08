@@ -25,6 +25,7 @@ function Todo() {
           setTodo([
             ...todo,
             {
+              id:todo.length+1,
               title: "Random Title",
               description: "Random description",
             },

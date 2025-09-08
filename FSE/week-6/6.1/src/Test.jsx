@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,memo } from 'react'
 function Test() {
   const[title,setTitle]=useState("Tridib")
   return (
@@ -19,10 +19,10 @@ function Test() {
   )
 }
 
-function Display({name}){
+const Display=React.memo(({name})=>{
   return <div>
     My name is {name}
   </div>
-}
+})
 
 export default Test

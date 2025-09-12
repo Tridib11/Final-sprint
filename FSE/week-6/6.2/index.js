@@ -65,6 +65,23 @@ app.get("/todos",(req,res)=>{
 })
 
 
+app.get("/sum",(req,res)=>{
+  const a=parseInt(req.query.a);
+  const b=parseInt(req.query.b)
+  const sum=a+b
+  res.send(sum)
+})
+
+app.get("/sumTill",(req,res)=>{
+  const a=parseInt(req.query.a)
+  let ans=0;
+  for(let i=1;i<=a;i++){
+    ans+=i
+  }
+  res.send(ans)
+})
+
+
 app.listen(3000,()=>{
   console.log("Server started")
 })

@@ -4,8 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import Id from './Id.jsx'
 import Memo from './Memo.jsx'
+import Callback from './Callback.jsx'
 
 createRoot(document.getElementById('root')).render(
   
-    <Memo/>
+    <Callback/>
 )

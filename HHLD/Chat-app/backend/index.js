@@ -15,9 +15,9 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log("Client connected");
-  socket.on('chat msg',(msg)=>{
-    console.log('Received msg '+msg)
-  })
+  socket.on("chat msg", (msg) => {
+    console.log("Received msg " + msg);
+  });
 });
 
 dotenv.config();

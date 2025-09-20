@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 
-function App() {
+function Memo() {
   const [add, setAdd] = useState(0);
   const [minus, setMinus] = useState(0);
   const multiplication = useMemo(
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Memo;

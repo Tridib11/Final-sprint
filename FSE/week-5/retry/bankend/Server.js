@@ -4,7 +4,6 @@ const app = express();
 const { createTodo, updateTodo } = require("./types");
 const { todo } = require("./db");
 
-
 app.use(cors())
 
 app.use(express.json());
@@ -17,13 +16,11 @@ app.post("/todo", async (req, res) => {
       msg: "You have entered wrong inputs",
     });
   }
-
   await todo.create({
     title: payload.title,
     description: payload.description,
     completed: false,
   });
-
   res.json({
     msg: "Todo created",
   });
@@ -44,7 +41,6 @@ app.put("/completed", async (req, res) => {
       msg: "Sorry wrong inputs",
     });
   }
-
   await todo.findByIdAndUpdate(
     {
       _id: req.body.id,
@@ -53,7 +49,6 @@ app.put("/completed", async (req, res) => {
       completed: true,
     }
   );
-
   res.json({
     msg: "Todo marked as completed",
   });

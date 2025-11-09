@@ -1,28 +1,28 @@
 import React, { useState } from 'react'
 
 function test() {
+  const[name,setName]=useState("Tridib")
   return (
     <div>
+
+      <button onClick={()=>{
+        setName(Math.random)
+      }}>Click here to update</button>
+      <Header title={name}/>
       <Header title="Tridib"/>
-      <HeaderRandom/>
+      <Header title="Tridib"/>
+      <Header title="Tridib"/>
+      <Header title="Tridib"/>
+      <Header title="Tridib"/>
+
     </div>
   )
 }
 
-function HeaderRandom(){
-  const[name,setName]=useState("Tridib")
+const Header=React.memo(({title})=>{
   return <div>
-    <Header title={name}/>
-      <button onClick={()=>{
-        setName(Math.random)
-      }}>Click me to update</button>
+    Hi my name is {title}
   </div>
-}
-
-function Header({title}){
-  return <div>
-    Hi i am {title}
-  </div>
-}
+})
 
 export default test

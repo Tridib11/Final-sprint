@@ -4,7 +4,6 @@ function test() {
   const[name,setName]=useState("Tridib")
   return (
     <div>
-
       <button onClick={()=>{
         setName(Math.random)
       }}>Click here to update</button>
@@ -12,9 +11,6 @@ function test() {
       <Header title="Tridib"/>
       <Header title="Tridib"/>
       <Header title="Tridib"/>
-      <Header title="Tridib"/>
-      <Header title="Tridib"/>
-
     </div>
   )
 }
